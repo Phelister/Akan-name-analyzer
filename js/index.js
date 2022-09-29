@@ -1,6 +1,7 @@
-const MALE_NAMES=[Kwasi,Kwadwo,Kwabena,Kwaku,Yaw,Kofi,Kwame];
-const FEMALE_NAMES=[Akosua,Adwoa,Abenaa,Akua,Yaa,Afua,Ama];
-const DAYS_OF_THE_WEEK=[];
+
+const MALE_NAMES=["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
+const FEMALE_NAMES=["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
+
 var email;
 var date=null;
 var userName;
@@ -11,18 +12,37 @@ var year;
 var month;
 var day;
 var dayOfWeek;
+var akhanName= null;
 
-function getAkhanNames(date, gender){
-    // if(date== null ||)
-    var AkhanName= null;
+function getAkhanNames(date1, gender1){
+    
+    
+    date =date.toString();
+   
+    gender=gender.toLowerCase();
 
-    date.toString();
-    gender.toString.toLowerCase;
-    gender.toLowerCase();
-    if(gender!=="male" || gender ||"female"){
-        return incorrectGender;
+    century=date.slice(0,2);
+    year=date.slice(2,4);
+    month=date.slice(5,7);
+    day=date.slice(8,10);
+
+    century=parseInt(century);
+    year=parseInt(year);
+    month=parseInt(month);
+    day= parseInt(day);
+
+    if(gender!=="male" || gender !=="female"){
+        if(gender==="non-binary"){
+            return alert("No Akhan Names exist for Non-binary Individuals,You'd need to identify as male or female to continue");
+        }
+        return alert("Enter your gender as either male of Female");
     }
+
     dayOfWeek=(((century/4)-2*century-1)+((5*year/4))+((26*(month+1)/10))+day)%7;
+
+    dayOfWeek=Math.round(dayOfWeek);
+    console.log(dayOfWeek);
+
     switch(dayOfWeek){
         case 0:
             if(gender=== "male"){
@@ -87,25 +107,34 @@ function getAkhanNames(date, gender){
 }
 
  function printUserAkhanName(actualAkhanName){
-    
+
 
  }
 
 
+ document.getElementById("formDetails").onclick=function(){
+    email=document.getElementById("email").value;
+    date=document.getElementById("date").value;
+    userName=document.getElementById("name").value;
+    gender=document.getElementById("gender").value;
+    console.log(email);
+    console.log(date);
+    console.log(userName);
+    console.log(gender);
+    console.log(century);
+    console.log(year);
+    console.log(day);
+    console.log(month);
+
+    actualAkhanName=getAkhanNames(date,gender);
+    console.log(akhanName);
+    console.log(gender);
+    console.log(dayOfWeek);
+    // printUserAkhanName(actualAkhanName);
+}
 
 
-$(document).ready(function(){
-    $('#formDetails').click(function(event){
-        event.preventDefault();
-        email=$('#email').val();
-        date=$('#date').val();
-        userName=$('#name').val();
-        gender=$('#gender').val();
-        actualAkhanName=getAkhanNames(date,gender);
-        printUserAkhanName(actualAkhanName);
-           
-    })
-});
+
 // You can use a form or prompt form you use jquery
 
 //get user input, user's birthday and gender
@@ -115,8 +144,4 @@ $(document).ready(function(){
 
 //get users name
 //
-var index_dayof week=
-
-function getAkhanNames(day,month, year,gender){
-    
-}
+// 
