@@ -71,31 +71,44 @@
 
     <!-- form details -->
 
-    <section class="bg-primary p-5" id="Name Calculator">
-      <div class="container justify-content-center">
+    <section class="bg-primary p-5 align-items-center justify-content-between" id="Name Calculator">
+      <!-- <div class="container justify-content-center">
         <div class="text-center">
           <h3>Name Calculator</h3>
-          <p>Fill in your Details below:</p>
-        </div>
+          <p>Fill in your Details below:</p> -->
+        <!-- </div>  -->
         <div class="row">
-          <div class="col-lg-4">
-            <form action="">
+          <!-- <h3 class="text-center">Name Calculator</h3>
+          <p class="text-center">Fill in your Details below:</p> -->
+          <div class="align-items-center col-lg-5" >
+            <form id="my-form">
+              <h3 class="text-center">Name Calculator</h3>
+               <p class="text-center">Fill in your Details below:</p>
               <label for="email" class="form-label">Email Address:</label>
                <input type="email" class="form-control" id="email" placeholder="e.g. mario@gmail.com">
                <label for="name" class="form-label">Name:</label>
                <input type="text" class="form-control" id="name">
                <label for="date" class="form-label">Date of Birth:</label>
-               <input type="date" class="form-control" id="name" placeholder="15/06/1998">
+               <input type="date" class="form-control" id="date" placeholder="15/06/1998">
+               <br>
                <label for="gender" class="form-label">Gender:</label>
-               <select name="form-select" id="gender"></select>
-               
+               <select class="form-select" id="gender">
+                <option value="" selected></option>
+               <option value="Male">Male</option>
+               <option value="Female">Female</option>
+               <option value="Female">Non-binary</option>
+              </select>
+              <p class=""><input type="submit"></p>
+              <div class="mb-4 text-center mt-3">
+                <button type="submit" class="btn-light-lg" id="formDetails"> Submit </button>
+              </div>
             </form>
           </div>
         </div>
       </div>
       
     </section>
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
