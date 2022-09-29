@@ -16,12 +16,16 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-   
     <nav class="navbar navbar-expand-md">
       <div class="container">
-
         <a class="navbar-brand" href="#">
-          <img src="/images/logo.jpg" alt="Akan" width="10" height="30" class="d-inline-block align-text-top">
+          <img
+            src="/images/logo.jpg"
+            alt="Akan"
+            width="10"
+            height="30"
+            class="d-inline-block align-text-top"
+          />
           AKAN
         </a>
 
@@ -31,8 +35,7 @@
           data-bs-toggle="collapse"
           data-bs-target="#navmenu"
         >
-         <span class="navbar toggler-icon"></span>
-          
+          <span class="navbar toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav ms-auto">
@@ -47,66 +50,88 @@
             </li>
           </ul>
         </div>
-        
       </div>
     </nav>
 
     <!-- introduction section -->
     <section class="p-1 text-center text-sm-start">
-
       <div class="container">
         <div class="d-sm-flex align-items-center justify-content-between">
-        
-        
-        <div class="intro-text1 my-5 p-1">
-          <h1>Unlock your <span class="text-warning">Akan Name</span> with our name analyzer system</h1>
-          <p class="lead">This is a web application that takes a user's birthday and calculates the day of the week you were born and then depending on your gender outputs your Akan Name.</p>
-          <p>Try it for your self</p>
-          <button type="button" class="btn btn-success btn-lg">Calculate my Name</button>
+          <div class="intro-text1 my-5 p-1">
+            <h1>
+              Unlock your <span class="text-warning">Akan Name</span> with our
+              name analyzer system
+            </h1>
+            <p class="lead">
+              This is a web application that takes a user's birthday and
+              calculates the day of the week you were born and then depending on
+              your gender outputs your Akan Name.
+            </p>
+            <p>Try it for your self</p>
+            <button type="button" class="btn btn-success btn-lg">
+              Calculate my Name
+            </button>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="images/africanbaby.jpeg"
+            alt="photo"
+          />
         </div>
-        <img class="img-fluid w-50 d-none d-sm-block" src="images/africanbaby.jpeg" alt="photo">
-      </div>
       </div>
     </section>
 
     <!-- form details -->
 
-    <section class="bg-primary p-5 align-items-center justify-content-between" id="Name Calculator">
-      <!-- <div class="container justify-content-center">
-        <div class="text-center">
-          <h3>Name Calculator</h3>
-          <p>Fill in your Details below:</p> -->
-        <!-- </div>  -->
-        <div class="row">
-          <!-- <h3 class="text-center">Name Calculator</h3>
-          <p class="text-center">Fill in your Details below:</p> -->
-          <div class="align-items-center col-lg-5" >
+    <section
+      class="bg-primary p-5 align-items-center justify-content-between"
+      id="Name Calculator"
+    >
+      <div class="container">
+        <div class="d-flex">
+          <div class="align-content-center justify-content-between">
+            <p>Once you click Submit buttom view your name details here</p>
+          </div>
+
+          <div class="align-items-center col-lg-5">
             <form id="my-form">
               <h3 class="text-center">Name Calculator</h3>
-               <p class="text-center">Fill in your Details below:</p>
+              <p class="text-center">Fill in your Details below:</p>
               <label for="email" class="form-label">Email Address:</label>
-               <input type="email" class="form-control" id="email" placeholder="e.g. mario@gmail.com">
-               <label for="name" class="form-label">Name:</label>
-               <input type="text" class="form-control" id="name">
-               <label for="date" class="form-label">Date of Birth:</label>
-               <input type="date" class="form-control" id="date" placeholder="15/06/1998">
-               <br>
-               <label for="gender" class="form-label">Gender:</label>
-               <select class="form-select" id="gender">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="e.g. mario@gmail.com"
+              />
+              <label for="name" class="form-label">Name:</label>
+              <input type="text" class="form-control" id="name" />
+              <label for="date" class="form-label">Date of Birth:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="date"
+                placeholder="15/06/1998"
+              />
+              <br />
+              <label for="gender" class="form-label">Gender:</label>
+              <select class="form-select" id="gender">
                 <option value="" selected></option>
-               <option value="Male">Male</option>
-               <option value="Female">Female</option>
-               <option value="Female">Non-binary</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Female">Non-binary</option>
               </select>
-              <p class=""><input type="submit"></p>
+              <br />
+              <p class=""><input type="submit" /></p>
               <div class="mb-4 text-center mt-3">
-                <button type="submit" class="btn-light-lg" id="formDetails"> Submit </button>
+                <button type="submit" class="btn-light-lg" id="formDetails">
+                  Submit
+                </button>
               </div>
             </form>
           </div>
         </div>
       </div>
-      
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- JavaScript Bundle with Popper -->

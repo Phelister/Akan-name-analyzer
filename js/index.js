@@ -5,7 +5,7 @@ var email;
 var date=null;
 var userName;
 var gender=null;
-var akhanName;
+var actualAkhanName;
 var century;
 var year;
 var month;
@@ -13,11 +13,15 @@ var day;
 var dayOfWeek;
 
 function getAkhanNames(date, gender){
-    if(date== null ||)
-    
+    // if(date== null ||)
+    var AkhanName= null;
+
     date.toString();
     gender.toString.toLowerCase;
     gender.toLowerCase();
+    if(gender!=="male" || gender ||"female"){
+        return incorrectGender;
+    }
     dayOfWeek=(((century/4)-2*century-1)+((5*year/4))+((26*(month+1)/10))+day)%7;
     switch(dayOfWeek){
         case 0:
@@ -82,6 +86,11 @@ function getAkhanNames(date, gender){
     return akhanName;
 }
 
+ function printUserAkhanName(actualAkhanName){
+    
+
+ }
+
 
 
 
@@ -92,8 +101,8 @@ $(document).ready(function(){
         date=$('#date').val();
         userName=$('#name').val();
         gender=$('#gender').val();
-        akhanName=getAkhanNames(date,gender);
-        printUserAkhanName(akhanName);
+        actualAkhanName=getAkhanNames(date,gender);
+        printUserAkhanName(actualAkhanName);
            
     })
 });
