@@ -17,6 +17,9 @@ const FEMALE_NAMES = [
   "Ama",
 ];
 
+const DAY_OF_THE_WEEK = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+
 var email;
 var date = null;
 var userName;
@@ -76,7 +79,11 @@ function getAkhanNames(varDate, varGender) {
   return akhanName;
 }
 
-function printUserAkhanName(actualAkhanName) {}
+function printUserAkhanName(actualName) {
+
+  document.getElementById("updateDetails").innerHTML = "Hi" +userName + "You were born on a " + DAY_OF_THE_WEEK[dayOfWeek] + ". Your Akan name is " + actualName + ".";
+
+}
 
 document.getElementById("formDetails").onclick = function () {
   email = document.getElementById("email").value;
