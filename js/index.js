@@ -13,29 +13,39 @@ var month;
 var day;
 var dayOfWeek;
 var akhanName= null;
+/*
 
-function getAkhanNames(date1, gender1){
+function getgender(){
+    gender=document.getElementById("gender").value;
+}
+function getDate(){
+    date=document.getElementById("date").value;
+}
+
+function getAkhannames{
+
+}
+*/
+
+function getAkhanNames(varDate, varGender){
     
     
-    date =date.toString();
+    varDate =varDate.toString();
    
-    gender=gender.toLowerCase();
+    varGender=varGender.toLowerCase();
 
-    century=date.slice(0,2);
-    year=date.slice(2,4);
-    month=date.slice(5,7);
-    day=date.slice(8,10);
+    century=varDate.slice(0,2);
+    year=varDate.slice(2,4);
+    month=varDate.slice(5,7);
+    day=varDate.slice(8,10);
 
     century=parseInt(century);
     year=parseInt(year);
     month=parseInt(month);
     day= parseInt(day);
 
-    if(gender!=="male" || gender !=="female"){
-        if(gender==="non-binary"){
-            return alert("No Akhan Names exist for Non-binary Individuals,You'd need to identify as male or female to continue");
-        }
-        return alert("Enter your gender as either male of Female");
+    if(gender!="male" || gender !="female"){ 
+        return alert("Enter your gender as either Male of Female");
     }
 
     dayOfWeek=(((century/4)-2*century-1)+((5*year/4))+((26*(month+1)/10))+day)%7;
@@ -110,6 +120,8 @@ function getAkhanNames(date1, gender1){
 
 
  }
+
+ document.getElementById("formDetails").onclick=ak
 
 
  document.getElementById("formDetails").onclick=function(){
