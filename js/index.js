@@ -81,7 +81,7 @@ function getAkhanNames(varDate, varGender) {
 
 function printUserAkhanName(actualName) {
 
-  document.getElementById("updateDetails").innerHTML = "Hi! " + userName + " you were born on a " + DAY_OF_THE_WEEK[dayOfWeek] + " and your Akan name is " + actualName + ".";
+  document.getElementById("updateDetails").innerHTML = "Hi! " + userName + " , your Akan name is " + actualName + " this is a Ghananian name is given to " + gender.toLowerCase() + "s born on a " +  DAY_OF_THE_WEEK[dayOfWeek] + ".";
 
 }
 
@@ -100,15 +100,5 @@ document.getElementById("formDetails").onclick = function () {
   console.log(gender);
   console.log(dayOfWeek);
   printUserAkhanName(actualAkhanName);
-};
+}
 
-// You can use a form or prompt form you use jquery
-
-//get user input, user's birthday and gender
-//m or f
-
-//calculate day of birth:
-
-//get users name
-//
-//
