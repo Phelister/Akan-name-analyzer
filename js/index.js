@@ -81,7 +81,7 @@ function getAkhanNames(varDate, varGender) {
 
 function printUserAkhanName(actualName) {
 
-  document.getElementById("updateDetails").innerHTML = "Hi" +userName + "You were born on a " + DAY_OF_THE_WEEK[dayOfWeek] + ". Your Akan name is " + actualName + ".";
+  document.getElementById("updateDetails").innerHTML = "Hi! " + userName + " you were born on a " + DAY_OF_THE_WEEK[dayOfWeek] + " and your Akan name is " + actualName + ".";
 
 }
 
