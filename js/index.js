@@ -1,25 +1,6 @@
-const MALE_NAMES = [
-  "Kwasi",
-  "Kwadwo",
-  "Kwabena",
-  "Kwaku",
-  "Yaw",
-  "Kofi",
-  "Kwame",
-];
-const FEMALE_NAMES = [
-  "Akosua",
-  "Adwoa",
-  "Abenaa",
-  "Akua",
-  "Yaa",
-  "Afua",
-  "Ama",
-];
-
+const MALE_NAMES = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
+const FEMALE_NAMES = ["Akosua", "Adwoa","Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 const DAY_OF_THE_WEEK = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-
 var email=null;
 var date = null;
 var userName;
@@ -32,7 +13,9 @@ var day;
 var dayOfWeek;
 var akhanName = null;
 
+
 function getAkhanNames(varDate, varGender) {
+  
   if(varGender!=="male" && varGender!=="female" && userName.length < 1){
     
     return alert("Please select the correct gender and userName");
@@ -75,10 +58,12 @@ function printUserAkhanName(actualName) {
 
  if((gender==="male"|| gender==="female") && date.length>=1 && userName.length>=1){
   document.getElementById("updateDetails").innerHTML = "Hi " + userName + "! your Akan name is " + actualName + ". This is a Ghananian name given to " + gender.toLowerCase() + "s born on a " +  DAY_OF_THE_WEEK[dayOfWeek] + ".";
-  
+  document.getElementById("updateDetails").style.color = "magenta";
+  document.getElementById("updateDetails").style.fontWeight = "bold";
 }
  else{
-  document.getElementById("updateDetails").innerHTML ="Please ensure all fields are filled in correctly to view your Akan Name here";
+  document.getElementById("updateDetails").innerHTML ="Please ensure all fields are filled in correctly to view your Akan Name here.";
+  document.getElementById("updateDetails").style.color = "#ff0000";
  }
 
 }

@@ -9,7 +9,6 @@ body{
 }
 .navbar{
     background-color:rgb(248, 208, 6);
-    /* bg-dark navbar-dark */
     color: #ffffff;
 }
 ul{
@@ -25,8 +24,6 @@ img{
 }
 
 
-
-
 .intro-text{
     justify-content: center;
     
@@ -36,4 +33,7 @@ img{
     background-color: aqua; 
     /* background-color: rgb(243, 227, 6); */
 
+}
+.updateDetails{
+    background-image:url('../images/logo.jpg');  ;
 }
