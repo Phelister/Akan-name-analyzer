@@ -57,7 +57,7 @@ function getAkhanNames(varDate, varGender) {
   month = parseInt(varDate.slice(5, 7));
   day = parseInt(varDate.slice(8, 10));
 
-  dayOfWeek = Math.floor((((century / 4) - 2 * century - 1 )+ (5 * year/4) + ((26 * (month + 1)/ 10)) +(day-0.5) )% 7);
+  dayOfWeek = Math.floor((((century / 4) - 2 * century - 1 )+ (5 * year/4) + ((26 * (month + 1)/ 10)) +(day) )% 7);
      //( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + (DD - 0.5)) % 7;
     // ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
   switch (varGender) {
@@ -78,7 +78,7 @@ function printUserAkhanName(actualName) {
   document.getElementById("updateDetails").innerHTML = "Hi! " + userName + " , your Akan name is " + actualName + ". This is a Ghananian name given to " + gender.toLowerCase() + "s born on a " +  DAY_OF_THE_WEEK[dayOfWeek] + ".";
  }
  else{
-  document.getElementById("updateDetails").innerHTML ="Please ensure all fields are filled in correctly";
+  document.getElementById("updateDetails").innerHTML ="Please ensure all fields are filled in correctly to view your Akan Name here";
  }
 
 }
