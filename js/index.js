@@ -20,7 +20,7 @@ const FEMALE_NAMES = [
 const DAY_OF_THE_WEEK = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 
-var email;
+var email=null;
 var date = null;
 var userName;
 var gender = null;
@@ -31,48 +31,41 @@ var month;
 var day;
 var dayOfWeek;
 var akhanName = null;
-/*
-
-function getgender(){
-    gender=document.getElementById("gender").value;
-}
-function getDate(){
-    date=document.getElementById("date").value;
-}
-
-function getAkhannames{
-
-}
-*/
 
 function getAkhanNames(varDate, varGender) {
-  varDate = varDate.toString();
-  varGender = varGender.toLowerCase();
+  if(varGender!=="male" && varGender!=="female" && userName.length < 1){
+    
+    return alert("Please select the correct gender and userName");
+  }
+
+  if(varGender!=="male" && varGender!=="female"){
+    
+    return alert("Enter your gender as either Male or Female");
+  }
+
+  if(userName.length < 1){
+    
+    return alert("please enter your Name");
+  }
+  if(varDate.length < 1){
+    
+    return alert("please enter a valid date");
+  }
+
   century = parseInt(varDate.slice(0, 2));
   year = parseInt(varDate.slice(2, 4));
   month = parseInt(varDate.slice(5, 7));
   day = parseInt(varDate.slice(8, 10));
 
-  // if(gender!="male" || gender !="female"){
-  //     return alert("Enter your gender as either Male of Female");
-  // }
-
-  dayOfWeek =
-    Math.floor(
-      century / 4 -
-        2 * century -
-        1 +
-        (5 * year) / 4 +
-        (26 * (month + 1)) / 10 +
-        day
-    ) % 7;
-
+  dayOfWeek = Math.floor((((century / 4) - 2 * century - 1 )+ (5 * year/4) + ((26 * (month + 1)/ 10)) +(day-0.5) )% 7);
+     //( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + (DD - 0.5)) % 7;
+    // ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
   switch (varGender) {
     case "male":
       akhanName = MALE_NAMES[dayOfWeek];
       break;
     case "female":
-        akhanName = FEMALE_NAMES[dayOfWeek];
+      akhanName = FEMALE_NAMES[dayOfWeek];
       break;
   }
 
@@ -81,7 +74,12 @@ function getAkhanNames(varDate, varGender) {
 
 function printUserAkhanName(actualName) {
 
-  document.getElementById("updateDetails").innerHTML = "Hi! " + userName + " , your Akan name is " + actualName + " this is a Ghananian name is given to " + gender.toLowerCase() + "s born on a " +  DAY_OF_THE_WEEK[dayOfWeek] + ".";
+ if((gender==="male"|| gender==="female") && date.length>=1 && userName.length>=1){
+  document.getElementById("updateDetails").innerHTML = "Hi! " + userName + " , your Akan name is " + actualName + ". This is a Ghananian name given to " + gender.toLowerCase() + "s born on a " +  DAY_OF_THE_WEEK[dayOfWeek] + ".";
+ }
+ else{
+  document.getElementById("updateDetails").innerHTML ="Please ensure all fields are filled in correctly";
+ }
 
 }
 
@@ -90,10 +88,21 @@ document.getElementById("formDetails").onclick = function () {
   date = document.getElementById("date").value;
   userName = document.getElementById("name").value;
   gender = document.getElementById("gender").value;
+  
   console.log(email);
   console.log(date);
-  console.log(userName);
   console.log(gender);
+ 
+
+  // if(ç){
+    
+  //   return alert("Enter your gender as either Male or Female");
+  // }
+  // if(userName=="null"){
+    
+  //   return alert("please enter your username");
+  // }
+ 
 
   actualAkhanName = getAkhanNames(date, gender);
   console.log(akhanName);
