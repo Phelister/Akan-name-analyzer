@@ -76,11 +76,19 @@ function printUserAkhanName(actualName) {
 
  if((gender==="male"|| gender==="female") && date.length>=1 && userName.length>=1){
   document.getElementById("updateDetails").innerHTML = "Hi! " + userName + " , your Akan name is " + actualName + ". This is a Ghananian name given to " + gender.toLowerCase() + "s born on a " +  DAY_OF_THE_WEEK[dayOfWeek] + ".";
- }
+  
+}
  else{
   document.getElementById("updateDetails").innerHTML ="Please ensure all fields are filled in correctly to view your Akan Name here";
  }
 
+}
+
+document.getElementById("clearField").onclick = function (){
+  document.getElementById("email").value ="";
+  document.getElementById("date").value ="";
+  document.getElementById("name").value =" ";
+  document.getElementById("gender").value=" ";
 }
 
 document.getElementById("formDetails").onclick = function () {
