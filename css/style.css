@@ -8,7 +8,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 .navbar{
-    background-color:orange;
+    background-color:rgb(248, 208, 6);
     /* bg-dark navbar-dark */
     color: #ffffff;
 }
@@ -31,3 +31,8 @@ img{
     justify-content: center;
     
 } 
+.calc{
+    background-color: aqua; 
+    /* background-color: rgb(243, 227, 6); */
+
+}
