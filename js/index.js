@@ -74,7 +74,7 @@ function getAkhanNames(varDate, varGender) {
 function printUserAkhanName(actualName) {
 
  if((gender==="male"|| gender==="female") && date.length>=1 && userName.length>=1){
-  document.getElementById("updateDetails").innerHTML = "Hi! " + userName + " , your Akan name is " + actualName + ". This is a Ghananian name given to " + gender.toLowerCase() + "s born on a " +  DAY_OF_THE_WEEK[dayOfWeek] + ".";
+  document.getElementById("updateDetails").innerHTML = "Hi " + userName + "! your Akan name is " + actualName + ". This is a Ghananian name given to " + gender.toLowerCase() + "s born on a " +  DAY_OF_THE_WEEK[dayOfWeek] + ".";
   
 }
  else{
