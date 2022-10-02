@@ -19,6 +19,7 @@ Akan Name Analyzer application
 1. CSS
 1. JavaScript
 1. Visual Studio Code
+1. BootStrap.
 <br>
 
 *<p>This is a work in progress project more technologies to be added with time.</p>*
@@ -30,7 +31,7 @@ Akan Name Analyzer application
 
 ## Live site link
 
-View the live link at : [Portfolio Link](https://phelister.github.io/akan-name-analyzer/ "Name Analyzer")
+View the live link at : [Name Analyzer Link](https://phelister.github.io/akan-name-analyzer/ "Name Analyzer")
 
 ## Support and contact details
 {If you run into any issues or have questions,ideas and concerns feel free to reach out via email phelistereiggbo@gmail.com.
