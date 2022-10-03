@@ -16,9 +16,9 @@ var akhanName = null;
 
 function getAkhanNames(varDate, varGender) {
   
-  if(varGender!=="male" && varGender!=="female" && userName.length < 1){
+  if(varGender!=="male" && varGender!=="female" && userName.length < 1 && varDate.length < 1){
     
-    return alert("Please select the correct gender and userName");
+    return alert("Please select the correct gender, date of birth and userName");
   }
 
   if(varGender!=="male" && varGender!=="female"){
@@ -28,11 +28,11 @@ function getAkhanNames(varDate, varGender) {
 
   if(userName.length < 1){
     
-    return alert("please enter your Name");
+    return alert("Please enter your Name");
   }
   if(varDate.length < 1){
     
-    return alert("please enter a valid date");
+    return alert("Please enter a valid date");
   }
 
   century = parseInt(varDate.slice(0, 2));
@@ -73,6 +73,7 @@ document.getElementById("clearField").onclick = function (){
   document.getElementById("date").value ="";
   document.getElementById("name").value =" ";
   document.getElementById("gender").value=" ";
+  document.getElementById("updateDetails").innerHTML ="Once you click Submit buttom view your name details here."
 }
 
 document.getElementById("formDetails").onclick = function () {
